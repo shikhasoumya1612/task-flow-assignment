@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw'
 import { users, passwords } from '../data'
 
-const API = import.meta.env.VITE_API_URL ?? 'http://localhost:4000'
+const API = import.meta.env.VITE_API_URL || ''
 
 function generateToken(userId: string, email: string): string {
   const payload = { user_id: userId, email, exp: Date.now() + 86400000 }

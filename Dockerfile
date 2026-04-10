@@ -6,7 +6,7 @@ RUN npm ci
 COPY . .
 
 # Vite bakes env vars at build time, so pass API URL as a build arg
-ARG VITE_API_URL=http://localhost:4000
+ARG VITE_API_URL=
 ENV VITE_API_URL=${VITE_API_URL}
 RUN npm run build
 

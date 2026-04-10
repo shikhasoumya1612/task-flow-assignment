@@ -2,7 +2,7 @@ import { http, HttpResponse } from 'msw'
 import { projects, tasks } from '../data'
 import { getUserFromToken } from './auth'
 
-const API = import.meta.env.VITE_API_URL ?? 'http://localhost:4000'
+const API = import.meta.env.VITE_API_URL || ''
 
 function requireAuth(request: Request) {
   const userId = getUserFromToken(request.headers.get('Authorization'))
