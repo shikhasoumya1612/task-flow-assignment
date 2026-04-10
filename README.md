@@ -18,7 +18,7 @@ React 19, TypeScript, Vite 8, TanStack React Query, React Router DOM 7, Tailwind
 ## Running Locally
 
 ```bash
-git clone https://github.com/shikhasoumya1612/task-flow.git
+git clone https://github.com/shikhasoumya1612/task-flow-assignemnt.git
 cd task-flow
 cp .env.example .env
 docker compose up
