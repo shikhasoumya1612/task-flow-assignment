@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #a78bfa;
+  --color-primary-hover: #8b5cf6;
+  --color-primary-foreground: #ffffff;
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0f0eb;
+
+  --color-card: #ffffff;
+  --color-card-hover: #f8f8f5;
+
+  --color-muted: #eeeee8;
+  --color-muted-foreground: #6b6b6b;
+
+  --color-border: #e0e0da;
+  --color-input: #e0e0da;
+
+  --color-destructive: #ef4444;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  --color-card-green: #4ade80;
+  --color-card-yellow: #facc15;
+  --color-card-red: #fb7185;
+  --color-card-purple: #c084fc;
+  --color-card-orange: #fb923c;
+  --color-card-blue: #60a5fa;
+  --color-card-teal: #2dd4bf;
+  --color-card-pink: #f472b6;
+
+  --font-family-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  .dark {
+    --color-primary: #a78bfa;
+    --color-primary-hover: #c4b5fd;
+    --color-primary-foreground: #0a0a0a;
+
+    --color-background: #0a0a0a;
+    --color-foreground: #f5f5f5;
+    --color-surface: #161616;
+    --color-surface-hover: #1e1e1e;
+
+    --color-card: #1a1a1a;
+    --color-card-hover: #222222;
+
+    --color-muted: #1e1e1e;
+    --color-muted-foreground: #888888;
+
+    --color-border: #2a2a2a;
+    --color-input: #2a2a2a;
+
+    --color-destructive: #ff6b6b;
+    --color-success: #4ade80;
+    --color-warning: #fbbf24;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  a,
+  [role="button"],
+  select,
+  label[for] {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+
+  [draggable="true"] {
+    -webkit-user-drag: element;
+  }
+}
